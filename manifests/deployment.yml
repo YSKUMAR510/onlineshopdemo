@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "demo-ba16"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "demo-ba16"
+    spec:
+      containers:
+        - name: "demo-ba16"
+          image: "samdemo.azurecr.io/demo"
+          ports:
+          - containerPort: 80
